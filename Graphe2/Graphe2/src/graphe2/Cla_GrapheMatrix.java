@@ -31,7 +31,9 @@ public class Cla_GrapheMatrix implements Int_Graphe {
     
     @Override
     public void addNode(float info) {
-        int i, l = this.matrix.size();
+        int i = 0, l = this.matrix.size();
+        while (this.matrix.get(0).get(i) != info && i < l) {++i;}
+        if (i < l) {return;}
         this.matrix.get(0).add(info);
         ArrayList<Float> aux = new ArrayList();
         aux.add(info);
@@ -73,5 +75,20 @@ public class Cla_GrapheMatrix implements Int_Graphe {
     @Override
     public void removeEdge (Cla_Node node1, Cla_Node node2) {
         this.changeEdgeValue(node1, node2, Float.POSITIVE_INFINITY);
+    }
+    
+    @Override
+    public void loadFile (String fileName) {
+        int[][] file = Open_file.loadFile(fileName);
+        int i = 0;
+        Cla_Node node1 = new Cla_Node(0, new ArrayList<Float>(), new ArrayList<Float>());
+        Cla_Node node2 = new Cla_Node(0, new ArrayList<Float>(), new ArrayList<Float>());
+        while (i < file.length) {
+            this.addNode(file[i][0]);
+            node1.info = file[i][0];
+            this.addNode(file[i][1]);
+            node2.info = file[i][1];
+            this.addEdge(node1, node2, file[i][2]);
+        }
     }
 }
