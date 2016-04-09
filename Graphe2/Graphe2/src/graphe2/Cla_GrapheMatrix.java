@@ -44,17 +44,34 @@ public class Cla_GrapheMatrix implements Int_Graphe {
     
     @Override
     public void removeNode (Cla_Node node) {
-        int i, n = 0;
-        while (this.matrix.get(0).get(n) != node.info) {++n;}
+        int i, n = 0, l = this.matrix.size();
+        while (this.matrix.get(0).get(n) != node.info) {++n; if(n==l){return;}}
         this.matrix.remove(n);
-        int l = this.matrix.size();
+        l = this.matrix.size();
         for (i = 0; i < l; ++i) {
             this.matrix.get(i).remove(n);
         }
     }
     
     @Override
+    public void changeEdgeValue (Cla_Node node1, Cla_Node node2, float value) {
+        int n = 0, p = 0, l = this.matrix.size();
+        while(this.matrix.get(0).get(n) != node1.info || this.matrix.get(0).get(p) != node2.info) {
+            if (this.matrix.get(0).get(n) != node1.info) {++n;}
+            if (this.matrix.get(0).get(p) != node1.info) {++p;}
+            if (n == l || p == l) {return;}
+        }
+        this.matrix.get(n).set(p, value);
+        if (this.matrix.get(0).get(0) == -1) {this.matrix.get(p).set(n, value);}
+    }
+    
+    @Override
     public void addEdge (Cla_Node node1, Cla_Node node2, float value) {
-        
+        this.changeEdgeValue(node1, node2, value);
+    }
+    
+    @Override
+    public void removeEdge (Cla_Node node1, Cla_Node node2) {
+        this.changeEdgeValue(node1, node2, Float.POSITIVE_INFINITY);
     }
 }

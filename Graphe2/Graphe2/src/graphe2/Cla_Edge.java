@@ -23,4 +23,9 @@ public class Cla_Edge implements Int_Edge{
         this.nodeDir = newDir;
         this.value = newValue;
     }
+    
+    @Override
+    public void changeEdgeValue (float newValue) {
+        this.changeEdgeDir(this.nodeDir, newValue);
+    }
 }
