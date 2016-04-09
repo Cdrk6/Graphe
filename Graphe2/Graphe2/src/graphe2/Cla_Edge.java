@@ -4,18 +4,23 @@
  * and open the template in the editor.
  */
 package graphe2;
-import java.util.Vector;
 
 /**
  *
  * @author dedrouas
  */
 public class Cla_Edge implements Int_Edge{
-    Cla_Node node1;
-    Cla_Node node2;
+    Cla_Node nodeDir;
+    float value;
     
-    Cla_Edge (Cla_Node node1, Cla_Node node2) {
-        this.node1 = node1;
-        this.node2 = node2;
+    Cla_Edge (Cla_Node nodeDir, float value) {
+        this.nodeDir = nodeDir;
+        this.value = value;
+    }
+    
+    @Override
+    public void changeEdgeDir (Cla_Node newDir, float newValue) {
+        this.nodeDir = newDir;
+        this.value = newValue;
     }
 }

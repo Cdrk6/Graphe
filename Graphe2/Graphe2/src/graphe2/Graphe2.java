@@ -9,6 +9,9 @@ package graphe2;
  *
  * @author Cédric
  */
-public interface Int_Node {
-    void changeNodeInfo(float newInfo);
+public class Graphe2 {
+    
+    void main() {
+        
+    }
 }

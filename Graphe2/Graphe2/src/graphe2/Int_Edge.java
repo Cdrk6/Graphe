@@ -10,5 +10,5 @@ package graphe2;
  * @author Cédric
  */
 public interface Int_Edge {
-   
+   void changeEdgeDir(Cla_Node newDir, float newValue);
 }

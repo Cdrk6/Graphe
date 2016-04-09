@@ -2,11 +2,18 @@ package graphe2;
 import java.util.ArrayList;
 
 public class Cla_Node implements Int_Node{
-    int info;
-    ArrayList <Cla_Node> linked;
+    float info;
+    ArrayList <Cla_Edge> succ;
+    ArrayList <Cla_Edge> prec;
     
-    Cla_Node (int info, ArrayList linked) {
+    Cla_Node (float info, ArrayList succ, ArrayList prec) {
         this.info = info;
-        this.linked = linked;
+        this.succ = succ;
+        this.prec = prec;
+    }
+    
+    @Override
+    public void changeNodeInfo(float newInfo) {
+        this.info = newInfo;
     }
 }
