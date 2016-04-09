@@ -4,13 +4,11 @@
  * and open the template in the editor.
  */
 package graphe2;
-import java.util.Vector;
 
 /**
  *
  * @author Cédric
  */
 public interface Int_Edge {
-    void removeEdge();
-    void changeDir();
+   
 }

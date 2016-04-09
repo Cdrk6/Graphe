@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package graphe2;
-import java.util.Vector;
 
 /**
  *

@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 package graphe2;
-import java.util.Vector;
 
 /**
  *
  * @author Cédric
  */
 public interface Int_Directed extends Int_Graphe {
-    
+    void changeDir(Cla_Edge edge, Cla_Node newDir);
 }

@@ -4,12 +4,11 @@
  * and open the template in the editor.
  */
 package graphe2;
-import java.util.Vector;
 
 /**
  *
  * @author Cédric
  */
 public interface Int_Valued extends Int_Graphe {
-    void changeEdgeValue(int newValue);
+    void changeEdgeValue(Cla_Edge edge, int newValue);
 }

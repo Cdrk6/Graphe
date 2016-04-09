@@ -1,11 +1,11 @@
 package graphe2;
-import java.util.Vector;
+import java.util.ArrayList;
 
 public class Cla_Node implements Int_Node{
     int info;
-    Vector linked;
+    ArrayList <Cla_Node> linked;
     
-    Cla_Node (int info, Vector linked) {
+    Cla_Node (int info, ArrayList linked) {
         this.info = info;
         this.linked = linked;
     }

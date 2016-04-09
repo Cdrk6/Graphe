@@ -1,11 +1,11 @@
 package graphe2;
-import java.util.Vector;
+import java.util.ArrayList;
 
 public class Cla_GrapheList implements Int_Graphe {
-    Vector nodes;
-    Vector edges;
+    ArrayList <Cla_Node> nodes;
+    ArrayList <Cla_Edge> edges;
     
-    Cla_GrapheList (Vector nodes, Vector edges) {
+    Cla_GrapheList (ArrayList nodes, ArrayList edges) {                         //Copie
         this.nodes = nodes;
         this.edges = edges;
     }

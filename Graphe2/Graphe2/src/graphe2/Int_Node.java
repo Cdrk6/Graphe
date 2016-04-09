@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package graphe2;
-import java.util.Vector;
 
 /**
  *
@@ -12,5 +11,4 @@ import java.util.Vector;
  */
 public interface Int_Node {
     void changeNodeInfo(int newInfo);
-    void removeNode();
 }

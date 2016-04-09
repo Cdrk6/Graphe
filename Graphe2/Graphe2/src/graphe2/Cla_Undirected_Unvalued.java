@@ -7,8 +7,8 @@ package graphe2;
 
 /**
  *
- * @author Cédric
+ * @author dedrouas
  */
-public interface Int_Unvalued extends Int_Graphe {
+public class Cla_Undirected_Unvalued implements Int_Undirected, Int_Unvalued {
     
 }
