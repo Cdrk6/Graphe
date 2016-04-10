@@ -21,6 +21,6 @@ public class Graphe2 {
     public static void main(String[] args) {
         matrice = new Cla_GrapheMatrix(false);
         matrice.loadFile(Open_file.IMGPATH);
-        //matrice.showGraphe();
+        matrice.showGraphe();
     }
 }

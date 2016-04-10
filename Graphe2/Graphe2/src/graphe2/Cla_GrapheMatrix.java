@@ -32,7 +32,7 @@ public class Cla_GrapheMatrix implements Int_Graphe {
     @Override
     public void addNode(float info) {
         int i = 0, l = this.matrix.size();
-        while (this.matrix.get(0).get(i) != info && i < l) {++i;}
+        while (i < l && this.matrix.get(0).get(i) != info) {++i;}
         if (i < l) {return;}
         this.matrix.get(0).add(info);
         ArrayList<Float> aux = new ArrayList();
@@ -92,6 +92,7 @@ public class Cla_GrapheMatrix implements Int_Graphe {
         }
     }
     
+    @Override
     public void showGraphe () {
         int i = 0, j = 0, l = this.matrix.size();
         while (i < l) {
