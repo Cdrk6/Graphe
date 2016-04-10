@@ -1,4 +1,4 @@
-package graphe2;
+/*package graphe2;
 import java.util.ArrayList;
 
 public class Cla_GrapheList implements Int_Graphe {
@@ -8,3 +8,4 @@ public class Cla_GrapheList implements Int_Graphe {
         this.nodes = nodes;
     }
 }
+*/

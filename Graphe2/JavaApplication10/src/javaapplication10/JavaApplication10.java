@@ -3,24 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package graphe2;
+package javaapplication10;
 
 /**
  *
  * @author Cédric
  */
-public class Graphe2 {
-    
-    //Cla_GrapheList liste;
-    static Cla_GrapheMatrix matrice;
-    
+public class JavaApplication10 {
+
     /**
-     *
-     * @param args
+     * @param args the command line arguments
      */
     public static void main(String[] args) {
-        matrice = new Cla_GrapheMatrix(false);
-        matrice.loadFile(Open_file.IMGPATH);
-        //matrice.showGraphe();
+        // TODO code application logic here
     }
+    
 }

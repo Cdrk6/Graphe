@@ -91,4 +91,16 @@ public class Cla_GrapheMatrix implements Int_Graphe {
             this.addEdge(node1, node2, file[i][2]);
         }
     }
+    
+    public void showGraphe () {
+        int i = 0, j = 0, l = this.matrix.size();
+        while (i < l) {
+            while (j < l) {
+                System.out.print(this.matrix.get(i).get(j)+" ");
+                j++;
+            }
+            System.out.print("\n");
+            i++;
+        }
+    }
 }
