@@ -9,17 +9,17 @@ import java.io.FileReader;
  * @author mad
  */
 public class Open_file {
-    public static final String IMGPATH = "content/dodecaedre.txt";
+    
     /**
      * @param args the command line arguments
      */
-    public int[][] loadFile(String args) {
+    public static int[][] loadFile(String args) {
        int [][] data = string2Int(readString(args));   
-       for(int i =0;i<data.length;++i){
+       /*for(int i =0;i<data.length;++i){
            System.out.print(data[i][0] +" ");
            System.out.print(data[i][1] +" ");
            System.out.println(data[i][2]);    
-       }
+       }*/
        return data;
     }
 

@@ -5,13 +5,30 @@
  */
 package graphe2;
 
+//import java.util.ArrayList;
+
 /**
  *
  * @author Cédric
  */
 public class Graphe2 {
     
-    void main() {
+    public static final String IMGPATH = "content/dodecaedre.txt";
+    //static Cla_GrapheList liste;
+    static Cla_GrapheMatrix matrice;
+    
+    
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
         
+        /*liste = new Cla_GrapheList(new ArrayList(),false,true);
+        liste.loadFile(IMGPATH);
+        liste.showGraphe();*/
+        matrice = new Cla_GrapheMatrix(false);
+        matrice.loadFile(IMGPATH);
+        matrice.showGraphe();
     }
 }
