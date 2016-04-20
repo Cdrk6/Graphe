@@ -124,6 +124,7 @@ public class Cla_GrapheMatrix implements Int_Graphe {
         }
     }
     
+    @Override
      public float[][] floyd() {
         int n = matrix.size();
         n--;

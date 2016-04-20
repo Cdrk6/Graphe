@@ -148,6 +148,7 @@ public class Cla_GrapheList implements Int_Graphe {
         }
     }
     
+    @Override
     public float[][] floyd() {
         return this.ListToMatrix().floyd();
     }

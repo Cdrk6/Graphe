@@ -20,5 +20,5 @@ public interface Int_Graphe {
     void changeEdgeValue(Cla_Node node1, Cla_Node node2, float value);
     void loadFile (String fileName);
     void showGraphe();
-    //void floyd();
+    float[][] floyd();
 }
